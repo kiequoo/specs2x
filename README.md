@@ -42,7 +42,7 @@ class ExampleDatabaseSpec extends DatabaseSpec {
 }
 ```
 
-And you get clean specification, without boilerplate code for managing database
+And you get clean specification without boilerplate code for managing database
 
 You can pass database manually as well
 
