@@ -28,7 +28,7 @@ implicit val database = new Database {
 }
 ```
 
-Then your database will be `implicitly` passed to your specification
+Then your database will be `implicitly` passed to the specification
 
 ```scala
 import specs2x.DatabaseSpec
@@ -48,7 +48,6 @@ You can pass database manually as well
 
 ```scala
 class ExampleDatabaseSpec extends DatabaseSpec( database )
-
 ```
 
 ## Setup
