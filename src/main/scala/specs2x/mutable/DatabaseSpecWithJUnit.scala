@@ -8,5 +8,4 @@ import specs2x.Database
  */
 abstract class DatabaseSpecWithJUnit(implicit val database: Database)
   extends SpecificationWithJUnit
-  with WithDatabase {
-}
+  with WithDatabase
