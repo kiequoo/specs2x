@@ -9,6 +9,8 @@ Extension for [Specs2](http://etorreborre.github.com/specs2/)
 Need to create an implicit `Database` instance, which will be used in specs
 
 ```scala
+import specs2x.Database
+
 implicit val database = new Database {
   def start() {
     // setup database
@@ -29,7 +31,9 @@ implicit val database = new Database {
 Then your database will be `implicitly` passed to your specification
 
 ```scala
-class ExampleDatabaseSpec extends DatabaseSpecWithJUnit {
+import specs2x.DatabaseSpec
+
+class ExampleDatabaseSpec extends DatabaseSpec {
   "ExampleDatabase" should {
     "insert record" in success  // each will be called in separate session
     "read record"   in success  // also DatabaseSpec is sequential by default
@@ -43,7 +47,7 @@ And you get clean specification, without boilerplate code for managing database
 You can pass database manually as well
 
 ```scala
-class ExampleDatabaseSpec extends DatabaseSpecWithJUnit( database )
+class ExampleDatabaseSpec extends DatabaseSpec( database )
 
 ```
 
