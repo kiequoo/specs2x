@@ -9,5 +9,8 @@ target
 .buildpath
 *.ids
 
-#JRebel
+# JRebel
 rebel.xml
+
+# Mac OS
+.DS_Store
