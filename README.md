@@ -66,6 +66,6 @@ class ExampleDatabaseSpec extends DatabaseSpec( database )
     <dependency>
         <groupId>ua.t3hnar.specs2x</groupId>
         <artifactId>specs2x_2.9.2</artifactId>
-        <version>1.0-SNAPSHOT</version>
+        <version>1.0</version>
     </dependency>
 ```
