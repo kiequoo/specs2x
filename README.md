@@ -6,12 +6,12 @@ Extension for [Specs2](http://etorreborre.github.com/specs2/)
 
 ### DatabaseSpec
 
-Need to create an implicit `Database` instance, which will be used in specs
+Need to create `Database` instance, which will be used in specs
 
 ```scala
 import specs2x.Database
 
-implicit val database = new Database {
+val database = new Database {
   def start() {
     // setup database
   }
@@ -28,26 +28,18 @@ implicit val database = new Database {
 }
 ```
 
-Then your database will be `implicitly` passed to the specification
+Then pass database instance to the specification
 
 ```scala
 import specs2x.DatabaseSpec
 
-class ExampleDatabaseSpec extends DatabaseSpec {
+class ExampleDatabaseSpec extends DatabaseSpec(database) {
   "ExampleDatabase" should {
     "insert record" in success  // each will be called in separate session
     "read record"   in success  // also DatabaseSpec is sequential by default
     "delete record" in success  // if any will fail, we will not go further (sequential ^ stopOnFail)
   }
 }
-```
-
-And you get clean specification without boilerplate code for managing database
-
-You can pass database manually as well
-
-```scala
-class ExampleDatabaseSpec extends DatabaseSpec( database )
 ```
 
 ## Setup

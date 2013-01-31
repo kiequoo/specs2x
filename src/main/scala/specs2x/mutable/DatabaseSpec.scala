@@ -6,4 +6,4 @@ import org.specs2.mutable.Specification
 /**
  * @author Yaroslav Klymko
  */
-abstract class DatabaseSpec(implicit val database: Database) extends Specification with WithDatabase
+abstract class DatabaseSpec(val database: Database) extends Specification with WithDatabase

@@ -6,6 +6,6 @@ import specs2x.Database
 /**
  * @author Yaroslav Klymko
  */
-abstract class DatabaseSpecWithJUnit(implicit val database: Database)
+abstract class DatabaseSpecWithJUnit(val database: Database)
   extends SpecificationWithJUnit
   with WithDatabase
