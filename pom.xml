@@ -10,7 +10,7 @@
 
     <groupId>ua.t3hnar.specs2x</groupId>
     <artifactId>specs2x_2.9.2</artifactId>
-    <version>1.1</version>
+    <version>1.2-SNAPSHOT</version>
 
     <name>specs2x</name>
     <url>http://github.com/t3hnar/specs2x</url>
