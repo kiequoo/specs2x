@@ -4,12 +4,12 @@
 
     <parent>
         <groupId>ua.t3hnar</groupId>
-        <artifactId>scala-parent-pom</artifactId>
-        <version>1.1</version>
+        <artifactId>scala-parent-pom_2.10</artifactId>
+        <version>2.1-SNAPSHOT</version>
     </parent>
 
     <groupId>ua.t3hnar.specs2x</groupId>
-    <artifactId>specs2x_2.9.2</artifactId>
+    <artifactId>specs2x_2.10</artifactId>
     <version>1.2-SNAPSHOT</version>
 
     <name>specs2x</name>
@@ -18,7 +18,7 @@
 
     <repositories>
         <repository>
-            <id>thenewmotion-nexus</id>
+            <id>thenewmotion</id>
             <url>http://nexus.thenewmotion.com/content/groups/public/</url>
         </repository>
     </repositories>

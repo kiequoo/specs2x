@@ -16,9 +16,9 @@ val database = new Database {
     // setup database
   }
 
-  def withSession[T](f: => T) = {
+  def withSession[T](f: => T)(implicit x: AsResult[T]): Result = {
     // create session
-    f
+    x.asResult(f)
     // submit session
   }
 

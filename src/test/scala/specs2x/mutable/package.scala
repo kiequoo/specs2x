@@ -1,5 +1,7 @@
 package specs2x
 
+import org.specs2.execute.{Result, AsResult}
+
 /**
  * @author Yaroslav Klymko
  */
@@ -9,9 +11,9 @@ package object mutable {
       // setup database
     }
 
-    def withSession[T](f: => T) = {
+    def withSession[T](f: => T)(implicit x: AsResult[T]): Result = {
       // create session
-      f
+      x.asResult(f)
       // submit session
     }
 
